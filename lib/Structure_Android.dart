@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Nice Flutter'),
     );
   }
 }
@@ -29,17 +29,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Icon _coeur = Icon(Icons.favorite_border, color: Colors.white,);
+  Icon _coeur = Icon(Icons.favorite_border, color: const Color.fromARGB(255, 0, 0, 0),);
   bool _likeBool = false;
 
   void _likeThis(){
     setState(() {
       if (_likeBool){
-        _coeur = Icon(Icons.favorite_border, color: Colors.white,);
+        _coeur = Icon(Icons.favorite_border, color: const Color.fromARGB(255, 223, 0, 0),);
         _likeBool = false;
       }
       else {
-        _coeur = Icon(Icons.favorite, color: Colors.white,);
+        _coeur = Icon(Icons.favorite, color: const Color.fromARGB(255, 0, 0, 0),);
         _likeBool = true;
       }
     });
@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
-          backgroundColor: Colors.red,
+          backgroundColor: const Color.fromARGB(255, 47, 177, 216),
         ),
               body: Center(
         child: Text(
@@ -75,13 +75,13 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        color: Colors.red,
+        color: const Color.fromARGB(255, 77, 161, 187),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
               tooltip: 'Open navigation menu',
-              icon: const Icon(Icons.menu, color: Colors.white),
+              icon: const Icon(Icons.menu, color: Color.fromARGB(255, 54, 54, 54)),
               onPressed: () {},
             ),
             IconButton(
