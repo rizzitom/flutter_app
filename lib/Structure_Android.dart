@@ -35,11 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       if (_likeBool){
         _coeur = Icon(Icons.favorite_border, color: Colors.white,);
-        bool _likeBool = false;
+        _likeBool = false;
       }
       else {
         _coeur = Icon(Icons.favorite, color: Colors.white,);
-        bool _likeBool = true;
+        _likeBool = true;
       }
     });
   }
