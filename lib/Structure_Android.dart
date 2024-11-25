@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -42,6 +43,14 @@ class _MyHomePageState extends State<MyHomePage> {
         _likeBool = true;
       }
     });
+    
+  }
+  
+  int _counter = 0;
+    void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
   }
 
   @override
@@ -54,6 +63,18 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         backgroundColor: Colors.red,
         ),
+              body: Center(
+        child: Text(
+          'Page: $_counter',
+          style: const TextStyle(fontSize: 24),
+        ),
+      ),
+      
+        floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
