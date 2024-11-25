@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   
   int _counter = 0;
-    void _incrementCounter() {
+    void _addContent() {
     setState(() {
       _counter++;
     });
@@ -58,10 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
-          actions: <Widget>[
-            IconButton(onPressed: _likeThis, icon: _coeur)
-        ],
-        backgroundColor: Colors.red,
+          backgroundColor: Colors.red,
         ),
               body: Center(
         child: Text(
@@ -71,10 +68,31 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       
         floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        onPressed: _addContent,
+        tooltip: 'Create',
         child: const Icon(Icons.add),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        shape: const CircularNotchedRectangle(),
+        color: Colors.red,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            IconButton(
+              tooltip: 'Open navigation menu',
+              icon: const Icon(Icons.menu, color: Colors.white),
+              onPressed: () {},
+            ),
+            IconButton(
+              tooltip: 'Like',
+              icon: _coeur,
+              onPressed: _likeThis,
+            ),
+          ],
+        ),
+      ),
     );
+    // Ajout https://api.flutter.dev/flutter/material/BottomAppBar-class.html?_gl=1*kz5um0*_ga*MjAwMDgwOTUuMTczMjEwMDE3Mw..*_ga_04YGWK0175*MTczMjUyMzE4My4yLjEuMTczMjUyMzMxNy4wLjAuMA..
   }
 }
