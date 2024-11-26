@@ -29,6 +29,26 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  int _selectedIndex = 0;
+  String _affichage = '0 : Accueil'; 
+
+    void itemClique(int index) {
+    setState(() {
+      _selectedIndex = index;
+      switch (_selectedIndex) {
+        case 0:
+          _affichage = '$_selectedIndex : Accueil';
+          break;
+        case 1:
+          _affichage = '$_selectedIndex : Favoris';
+          break;
+        case 2:
+          _affichage = '$_selectedIndex : Paramètres';
+          break;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Create',
         child: const Icon(Icons.add),
       ),
+
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     bottomNavigationBar: BottomNavigationBar(
       items: const <BottomNavigationBarItem>[
@@ -71,20 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ),
   );
 }
-
-int _selectedIndex = 0; 
-
-void itemClique(int index) {
-  setState(() {
-    _selectedIndex = index;
-    switch(_selectedIndex){
-      case 0:
-      {
-        _affichage = '$_selectedIndex : Accueil';
-      }
-      break;
-    }
-  });
 }
+
     // Ajout https://api.flutter.dev/flutter/material/BottomAppBar-class.html?_gl=1*kz5um0*_ga*MjAwMDgwOTUuMTczMjEwMDE3Mw..*_ga_04YGWK0175*MTczMjUyMzE4My4yLjEuMTczMjUyMzMxNy4wLjAuMA..
-  }
+
