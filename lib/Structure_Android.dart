@@ -7,11 +7,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Nice Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue,
       ),
@@ -29,29 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Icon _coeur = Icon(Icons.favorite_border, color: const Color.fromARGB(255, 0, 0, 0),);
-  bool _likeBool = false;
-
-  void _likeThis(){
-    setState(() {
-      if (_likeBool){
-        _coeur = Icon(Icons.favorite_border, color: const Color.fromARGB(255, 223, 0, 0),);
-        _likeBool = false;
-      }
-      else {
-        _coeur = Icon(Icons.favorite, color: const Color.fromARGB(255, 0, 0, 0),);
-        _likeBool = true;
-      }
-    });
-    
-  }
-  
-  int _counter = 0;
-    void _addContent() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,38 +37,54 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: const Color.fromARGB(255, 47, 177, 216),
         ),
               body: Center(
-        child: Text(
-          'Page: $_counter',
-          style: const TextStyle(fontSize: 24),
-        ),
-      ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(_affichage),
+                  ],
+                ),
+              ),
       
         floatingActionButton: FloatingActionButton(
-        onPressed: _addContent,
+        onPressed: () {},
         tooltip: 'Create',
         child: const Icon(Icons.add),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
-        color: const Color.fromARGB(255, 77, 161, 187),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(
-              tooltip: 'Open navigation menu',
-              icon: const Icon(Icons.menu, color: Color.fromARGB(255, 54, 54, 54)),
-              onPressed: () {},
-            ),
-            IconButton(
-              tooltip: 'Like',
-              icon: _coeur,
-              onPressed: _likeThis,
-            ),
-          ],
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+    bottomNavigationBar: BottomNavigationBar(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Accueil',
         ),
-      ),
-    );
+        BottomNavigationBarItem(
+          icon: Icon(Icons.favorite),
+          label: 'Favoris',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.settings),
+          label: 'Paramètres',
+        ),
+      ],
+      onTap: itemClique, 
+      currentIndex: _selectedIndex, 
+    ),
+  );
+}
+
+int _selectedIndex = 0; 
+
+void itemClique(int index) {
+  setState(() {
+    _selectedIndex = index;
+    switch(_selectedIndex){
+      case 0:
+      {
+        _affichage = '$_selectedIndex : Accueil';
+      }
+      break;
+    }
+  });
+}
     // Ajout https://api.flutter.dev/flutter/material/BottomAppBar-class.html?_gl=1*kz5um0*_ga*MjAwMDgwOTUuMTczMjEwMDE3Mw..*_ga_04YGWK0175*MTczMjUyMzE4My4yLjEuMTczMjUyMzMxNy4wLjAuMA..
   }
-}
