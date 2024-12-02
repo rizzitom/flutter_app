@@ -76,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 200,
               height: 200,
             ),
+            Image.network('https://www.shutterstock.com/image-vector/colombo-sri-lanka-22-nd-600nw-2350908681.jpg'),
           ],
         ),
       ),
