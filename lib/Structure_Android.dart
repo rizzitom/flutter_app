@@ -71,6 +71,11 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(_affichage),
+            Image.asset(
+              'assets/images/ltc.png',
+              width: 200,
+              height: 200,
+            ),
           ],
         ),
       ),
