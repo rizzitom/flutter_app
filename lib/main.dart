@@ -81,13 +81,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            SizedBox(width: 16.0),
+            const SizedBox(width: 16.0),
             Expanded(
               flex: 1,
               child: Center(
-                child: Image.network(
-                  'https://www.lesdelices31.fr/wp-content/uploads/2022/05/20220327_134931.jpg',
-                  fit: BoxFit.cover,
+                child: Image.asset(
+              'assets/images/pavlova.webp',
+              width: 200,
+              height: 200,
                 ),
               ),
             ),
