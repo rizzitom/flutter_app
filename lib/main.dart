@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Text(
                     'Pavlova aux fraises',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, backgroundColor: Color.fromARGB(255, 12, 233, 211)),
                   ),
                   SizedBox(height: 8.0),
                   Text(
@@ -58,9 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     'La Pavlova se caractérise par une croûte croustillante et un intérieur moelleux et léger, garni '
                     'de fruits et de crème fouettée.',
                   ),
-                  SizedBox(height: 16.0),
-                  Text('★★★★★  170 Notes', style: TextStyle(fontSize: 16)),
-                  SizedBox(height: 16.0),
+                  SizedBox(height: 18.0),
+                  Text('★★★★★  170 Notes', style: TextStyle(fontSize: 17)),
+                  SizedBox(height: 18.0),
                   Text('Préparation : 25 min'),
                   Text('Cuisson : 1 hr'),
                   Text('Nb. Pers : 4-6'),
