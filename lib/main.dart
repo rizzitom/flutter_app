@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
-            // Colonne de gauche
+
             const Expanded(
               flex: 2,
               child: Column(
@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(height: 16.0),
                   Text('Préparation : 25 min'),
                   Text('Cuisson : 1 hr'),
-                  Text('Nb. Pers. : 4-6'),
+                  Text('Nb. Pers : 4-6'),
                 ],
               ),
             ),
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
               flex: 1,
               child: Center(
                 child: Image.network(
-                  'https://www.lavieclaire.com/wp-content/uploads/2023/04/site_Pavlova-aux-fraises-1-scaled.jpg',
+                  'https://www.lesdelices31.fr/wp-content/uploads/2022/05/20220327_134931.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
