@@ -57,18 +57,31 @@ class _MyHomePageState extends State<MyHomePage> {
                     'La Pavlova est un dessert à base de meringue qui doit son nom à la ballerine russe Anna Pavlova. '
                     'La Pavlova se caractérise par une croûte croustillante et un intérieur moelleux et léger, garni '
                     'de fruits et de crème fouettée.',
+                    style: TextStyle(fontSize: 16),
                   ),
                   SizedBox(height: 18.0),
-                  Text('★★★★★  170 Notes', style: TextStyle(fontSize: 17)),
-                  SizedBox(height: 18.0),
+                  Row(
+                    children: [
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber),
+                      SizedBox(width: 18.0),
+                      Text(
+                        '170 Notes',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                    ],
+                  ),
+                  
                   Text('Préparation : 25 min'),
                   Text('Cuisson : 1 hr'),
                   Text('Nb. Pers : 4-6'),
                 ],
               ),
             ),
-            const SizedBox(width: 16.0),
-
+            SizedBox(width: 16.0),
             Expanded(
               flex: 1,
               child: Center(
