@@ -88,12 +88,11 @@ class _MyHomePageState extends State<MyHomePage> {
               'assets/images/pavlova.webp',
               width: 200,
               height: 200,
-              fit: BoxFit.cover,
                 ),
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
-      ),
-    );
-  }
-}
+      );
+    }
+  } 
