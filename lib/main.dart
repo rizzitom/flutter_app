@@ -41,8 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             const Expanded(
               flex: 2,
               child: Column(
@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                  
+                  SizedBox(height: 8.0),
                   Text('Préparation : 25 min'),
                   Text('Cuisson : 1 hr'),
                   Text('Nb. Pers : 4-6'),
@@ -84,13 +84,12 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(width: 16.0),
             Expanded(
               flex: 1,
-              child: Center(
                 child: Image.asset(
               'assets/images/pavlova.webp',
               width: 200,
               height: 200,
+              fit: BoxFit.cover,
                 ),
-              ),
             ),
           ],
         ),

@@ -35,7 +35,7 @@ class PageAccueil extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Bienvenue sur votre app incrementeur',
+              'Bienvenue sur votre app',
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
