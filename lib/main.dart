@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     'La Pavlova est un dessert à base de meringue qui doit son nom à la ballerine russe Anna Pavlova. '
                     'La Pavlova se caractérise par une croûte croustillante et un intérieur moelleux et léger, garni '
                     'de fruits et de crème fouettée.',
-                    style: TextStyle(fontSize: 16),
+                    style: TextStyle(fontSize: 16, backgroundColor: Color.fromARGB(255, 12, 233, 211)),
                   ),
                   SizedBox(height: 18.0),
                   Row(
@@ -75,9 +75,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   SizedBox(height: 8.0),
-                  Text('Préparation : 25 min'),
-                  Text('Cuisson : 1 hr'),
-                  Text('Nb. Pers : 4-6'),
+                  Text('Préparation : 25 min', style: TextStyle(backgroundColor: Color.fromARGB(255, 9, 192, 79))),
+                  Text('Cuisson : 1 hr', style: TextStyle(backgroundColor: Color.fromARGB(255, 9, 192, 79))),
+                  Text('Nb. Pers : 4-6', style: TextStyle(backgroundColor: Color.fromARGB(255, 9, 192, 79))),
                 ],
               ),
             ),
